@@ -345,6 +345,46 @@
         letter-spacing: 0.16em;
       }
 
+      .hero-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .github-hero-link {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px;
+        border: 1px solid rgba(139, 214, 216, 0.72);
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--cyan), var(--gold));
+        color: var(--ink);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        box-shadow: 0 5px 0 rgba(87, 66, 39, 0.65), 0 14px 28px rgba(0, 0, 0, 0.3);
+        transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+      }
+
+      .github-hero-link:focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 5px;
+      }
+
+      .github-hero-link:hover {
+        filter: brightness(1.08);
+        box-shadow: 0 2px 0 rgba(87, 66, 39, 0.65), 0 18px 34px rgba(0, 0, 0, 0.38);
+        transform: translateY(-3px);
+      }
+
+      .github-hero-link svg {
+        width: 23px;
+        height: 23px;
+      }
+
       @keyframes chip-float {
         0%, 100% { margin-top: 0; }
         50% { margin-top: -9px; }
@@ -1420,6 +1460,17 @@
           max-width: 125px;
         }
 
+        .github-hero-link {
+          gap: 6px;
+          padding-inline: 10px;
+          font-size: 8px;
+        }
+
+        .github-hero-link svg {
+          width: 20px;
+          height: 20px;
+        }
+
         .profile-card {
           grid-template-columns: 1fr;
         }
@@ -1524,13 +1575,19 @@
             <a class="header-contact" href="mailto:ronaldinhocay@gmail.com">Hablemos <span aria-hidden="true">↗</span></a>
           </header>
           <div class="hero-3d-scene" aria-hidden="true">
-            <div class="hero-orbit"></div>
-            <div class="floating-tech-chip"><span class="tech-chip-symbol">&lt;/&gt;</span><span>HTML</span></div>
-            <div class="floating-tech-chip"><span class="tech-chip-symbol">Py</span><span>PYTHON</span></div>
-            <div class="floating-tech-chip"><span class="tech-chip-symbol">JS</span><span>JAVASCRIPT</span></div>
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="floating-tech-chip" aria-hidden="true"><span class="tech-chip-symbol">&lt;/&gt;</span><span>HTML</span></div>
+            <div class="floating-tech-chip" aria-hidden="true"><span class="tech-chip-symbol">Py</span><span>PYTHON</span></div>
+            <div class="floating-tech-chip" aria-hidden="true"><span class="tech-chip-symbol">JS</span><span>JAVASCRIPT</span></div>
           </div>
           <div class="hero-copy">
-            <p class="eyebrow">Aprender, practicar<br>y construir con propósito.</p>
+            <div class="hero-intro">
+              <p class="eyebrow">Aprender, practicar<br>y construir con propósito.</p>
+              <a class="github-hero-link" href="https://github.com/ronaldinhocay-svg" target="_blank" rel="noopener noreferrer" aria-label="Visitar mi perfil de GitHub, se abre en una pestaña nueva">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.76 2.17 3.4 1.55.1-.72.39-1.22.7-1.5-2.47-.28-5.06-1.24-5.06-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.08 5.49.4.34.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+                <span>VER MI GITHUB</span>
+              </a>
+            </div>
             <p>Estudiante de TI con interés en soporte técnico, redes y desarrollo de software.</p>
           </div>
           <div class="hero-signature">Ronaldiño Cayllahua</div>
@@ -1580,7 +1637,7 @@
               <span class="about-highlight-number">02</span>
               <div>
                 <h3>Formación práctica</h3>
-                <p>Actividades académicas de mantenimiento, instalación de sistemas, documentación, redes y fibra óptica.</p>
+                <p>Prácticas académicas de soporte, redes, tendido de fibra óptica e instalaciones eléctricas.</p>
               </div>
             </article>
             <article class="about-highlight">
@@ -1607,8 +1664,8 @@
           </article>
           <article class="experience-card">
             <div class="experience-card-number" aria-hidden="true">02</div>
-            <h3>Redes e infraestructura</h3>
-            <p>Participación en actividades académicas de cableado Ethernet, instalación y tendido de fibra óptica, prácticas de empalme y organización de documentación.</p>
+            <h3>Telecomunicaciones e instalaciones eléctricas</h3>
+            <p>Prácticas académicas de instalaciones de telecomunicaciones: cableado Ethernet, tendido y empalme de fibra óptica; además de instalaciones eléctricas.</p>
           </article>
           <article class="experience-card">
             <div class="experience-card-number" aria-hidden="true">03</div>
@@ -1687,7 +1744,7 @@
               <div class="skill-group"><strong>Programación y web</strong><p>HTML5 · CSS3 · JavaScript · Python</p><span class="skill-level">Básico a intermedio · autoevaluado</span></div>
               <div class="skill-group"><strong>En aprendizaje</strong><p>PHP · Node.js · React · Next.js · Flutter · Android</p></div>
               <div class="skill-group"><strong>Soporte técnico</strong><p>Mantenimiento básico · instalación de sistemas operativos · diagnóstico inicial</p></div>
-              <div class="skill-group"><strong>Redes e infraestructura</strong><p>Fundamentos de redes · cableado Ethernet · prácticas de fibra óptica</p></div>
+              <div class="skill-group"><strong>Telecomunicaciones e instalaciones eléctricas</strong><p>Fundamentos de redes · cableado Ethernet · tendido y empalme de fibra óptica · instalaciones eléctricas</p><span class="skill-level">Experiencia en prácticas académicas</span></div>
               <div class="skill-group"><strong>Sistemas y herramientas</strong><p>Linux · Git · GitHub · Docker · Microsoft Word y Excel</p></div>
               <div class="skill-group"><strong>Diseño básico</strong><p>Photoshop · Illustrator · After Effects · CorelDRAW</p></div>
               <div class="skill-group"><strong>IA generativa</strong><p>Apoyo para investigar, aprender, comprender código y documentar; sigo practicando de forma autónoma.</p></div>
